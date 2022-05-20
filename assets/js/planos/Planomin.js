@@ -3,7 +3,7 @@
  * (c) 2016 Artem Tabalin
  * Licensed under MIT (https://github.com/tabalinas/jsgrid/blob/master/LICENSE)
  */
- ! function(a, b, c) {
+! function(a, b, c) {
     function d(a, c) {
         var d = b(a);
         d.data(f, this), this._container = d, this.data = [], this.fields = [], this._editingRow = null, this._sortField = null, this._sortOrder = i, this._firstDisplayingPage = 1, this._init(c), this.render()
@@ -50,7 +50,7 @@
             this.editing && this.editItem(b(a.event.target).closest("tr"))
         },
         rowDoubleClick: b.noop,
-        noDataContent: "Nada encontrado",
+        noDataContent: "Not found",
         noDataRowClass: "jsgrid-nodata-row",
         heading: !0,
         headerRowRenderer: null,
@@ -1368,7 +1368,7 @@
                         searchModeButtonTooltip: "Mudar para pesquisar",
                         insertModeButtonTooltip: "Mudar para inserir",
                         editButtonTooltip: "Editar",
-                        deleteButtonTooltip: "Apagar",
+                        deleteButtonTooltip: "Cancelar cobrança",
                         searchButtonTooltip: "Buscar",
                         clearFilterButtonTooltip: "Limpar Filtro",
                         insertButtonTooltip: "Inserir",
@@ -1429,7 +1429,7 @@
                         },
                         _createEditButton: function(a) {
                             return this._createGridButton(this.editButtonClass, this.editButtonTooltip, function(b, c) {
-                                b.editItem(window.location.href = "perfil.html"), c.stopPropagation()
+                                b.editItem(a), c.stopPropagation()
                             })
                         },
                         _createDeleteButton: function(a) {

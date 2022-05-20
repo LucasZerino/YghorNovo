@@ -8,15 +8,20 @@
         sorting: true,
         paging: true,
         autoload: true,
-        pageSize: 15,
+        pageSize: 10,
         pageButtonCount: 5,
-        deleteConfirm: "Você realmente deseja excluir o paciente?",
+        deleteConfirm: "Você realmente deseja excluir esse plano?",
         controller: db,
+        
         fields: [
-            { Nome: "Nome", type: "text", width: 150 },
-            { Nome: "Email", type: "text", width: 100 },
-            { Nome: "CPF", type: "text", width: 150 },
-        { Nome: "Plano", type: "select", items: db.countries, valueField: "Id", textField: "Nome" },
+            { Nome: "Nome do plano", type: "text", width: 150 },
+            { Nome: "Tipo", type: "select", items: db.tipo, valueField: "Id", textField: "Nome", width: 150 },
+            { Nome: "Tipo de pagamento", type: "select", items: db.pagamento, valueField: "Id", textField: "Nome", width: 150 },
+            { Nome: "Intervalo", type: "select", items: db.intervalo, valueField: "Id", textField: "Nome", width: 150 },
+            { Nome: "Envio anterior", type: "text", width: 130 },
+            { Nome: "Próximo envio", type: "text", width: 130 },
+            { Nome: "Valor", type: "text", width: 100 },
+        { Nome: "Vencimento", type: "select", items: db.status, valueField: "Id", textField: "Nome" },
         { type: "control" }
         ]
     });
@@ -66,9 +71,9 @@
             align: "center",
             width: 50
             },
-            { Nome: "Nome", type: "text", width: 150 },
-            { Nome: "Email", type: "text", width: 100 },
-            { Nome: "CPF", type: "text", width: 150 }
+            { Nome: "Nome do plano", type: "text", width: 150 },
+            { Nome: "Status", type: "text", width: 100 },
+            { Nome: "Valor", type: "text", width: 150 }
         ]
     });
     var selectedItems = [];
@@ -81,7 +86,7 @@
         });
     };
     var deleteSelectedItems = function() {
-        if(!selectedItems.length || !confirm("Are you sure?"))
+        if(!selectedItems.length || !confirm("Tem certeza?"))
             return;
         deleteClientsFromDb(selectedItems);
         var $grid = $("#batchDelete");

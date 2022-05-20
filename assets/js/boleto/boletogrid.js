@@ -8,15 +8,17 @@
         sorting: true,
         paging: true,
         autoload: true,
-        pageSize: 15,
+        pageSize: 10,
         pageButtonCount: 5,
-        deleteConfirm: "Você realmente deseja excluir o paciente?",
+        deleteConfirm: "Você realmente deseja cancelar essa cobrança?",
         controller: db,
+        
         fields: [
-            { Nome: "Nome", type: "text", width: 150 },
-            { Nome: "Email", type: "text", width: 100 },
-            { Nome: "CPF", type: "text", width: 150 },
-        { Nome: "Plano", type: "select", items: db.countries, valueField: "Id", textField: "Nome" },
+            { Nome: "Nº do boleto", type: "text", width: 150 },
+            { Nome: "Valor", type: "text", width: 100 },
+            { Nome: "Dt emissão", type: "text", width: 150 },
+            { Nome: "Dt vencimento", type: "text", width: 150 },
+        { Nome: "Status", type: "select", items: db.status, valueField: "Id", textField: "Nome" },
         { type: "control" }
         ]
     });
@@ -66,9 +68,9 @@
             align: "center",
             width: 50
             },
-            { Nome: "Nome", type: "text", width: 150 },
-            { Nome: "Email", type: "text", width: 100 },
-            { Nome: "CPF", type: "text", width: 150 }
+            { Nome: "Nº do boleto", type: "text", width: 150 },
+            { Nome: "Status", type: "text", width: 100 },
+            { Nome: "Valor", type: "text", width: 150 }
         ]
     });
     var selectedItems = [];
@@ -81,7 +83,7 @@
         });
     };
     var deleteSelectedItems = function() {
-        if(!selectedItems.length || !confirm("Are you sure?"))
+        if(!selectedItems.length || !confirm("Tem certeza?"))
             return;
         deleteClientsFromDb(selectedItems);
         var $grid = $("#batchDelete");
