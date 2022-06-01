@@ -249,6 +249,7 @@ var options = {
       ]
   }],
   chart: {
+      //Faturamento Mensal
       id: 'area-datetime',
       type: 'area',
       height: 425,
@@ -375,7 +376,8 @@ charttimeline.render();
 var options17 = {
   series: [76, 67, 61, 10],
   chart: {
-      height: 380,
+      //Visão Geral Do Crescimento
+      height: 435,
       type: 'radialBar',
   },
   plotOptions: {
@@ -400,7 +402,7 @@ var options17 = {
       }
   },
   colors: [vihoAdminConfig.primary, vihoAdminConfig.secondary, vihoAdminConfig.primary, vihoAdminConfig.secondary],
-  labels: ['Total de Pacientes', 'Consultas marcadas', 'Sessões', 'Novos pacientes'],
+  labels: ['Total de Pacientes', 'Pacientes Ativos', 'Pacientes Inadimplentes', 'Pacientes Inativos'],
   legend: {
       show: true,
       floating: true,
@@ -447,7 +449,8 @@ var options21 = {
       data: [90, 78, 90, 84, 94, 60, 95, 88, 95]
   }],
   chart: {
-      height: 405,
+      //Financeiro
+      height: 300,
       type: 'area',
       toolbar: {
           show: false
@@ -622,7 +625,8 @@ var options55 = {
       }]
   }],
   chart: {
-      height: 250,
+      //Pacientes ativos
+      height: 342,
       type: "bar",
       toolbar: {
           show: false,

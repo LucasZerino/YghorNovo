@@ -184,25 +184,29 @@
               <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
               <div id="mainnav">           
                 <ul class="nav-menu custom-scrollbar">
-                  <li class="back-btn">
-                    <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
-                  </li>
-                  <li class="sidebar-main-title">
-                    <div>
-                      <h6>Dashboard</h6>
-                    </div>
-                  </li>
-                  <li class="dropdown"><a  class="nav-link menu-title" href="index.html"><i data-feather="home"></i><span>Home</span></a>
-                  </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="javascript:void()"><i data-feather="user"></i><span>Pacientes</span></a>
-                    <ul class="nav-submenu menu-content">
-                      <li><a href="pacientes.html">Lista de Pacientes</a></li>
-                      <li><a href="cadastro.html">Cadastrar Paciente</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="financeiro.html"><i data-feather="credit-card"></i><span>Financeiro</span></a>
-                  </li>
-                </ul>
+                    <li class="back-btn">
+                      <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
+                    </li>
+                    <li class="sidebar-main-title">
+                      <div>
+                        <h6>Dashboard</h6>
+                      </div>
+                    </li>
+                    <li class="dropdown"><a  class="nav-link menu-title" href="index.html"><i data-feather="home"></i><span>Home</span></a>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="pacientes.html"><i data-feather="user"></i><span>Pacientes</span></a>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="financeiro.html"><i data-feather="credit-card"></i><span>Financeiro</span></a>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="planos.html"><i data-feather="airplay"></i><span>Planos</span></a>
+                        <ul class="nav-submenu menu-content">
+                            <li><a href="planos.html">Planos</a></li>
+                            <li><a href="cadastrarplano.html">Cadastrar Plano</a></li>
+                          </ul>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="configurações.html"><i data-feather="settings"></i><span>Configurações</span></a>
+                    </li>
+                  </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
@@ -214,10 +218,10 @@
             <div class="page-header">
               <div class="row">
                 <div class="col-sm-6">
-                  <h3><br>Cadastro de Paciente</h3>
+                  <h3><br>Cadastro de Plano</h3>
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Pacientes</li>
+                    <li class="breadcrumb-item active">Plano</li>
                     <li class="breadcrumb-item active">Cadastro</li>
                   </ol>
                 </div>
@@ -230,141 +234,42 @@
             </div>
           </div>
          <!-- Container-fluid starts-->
-         <div class="abas"></div>
          <div class="container-fluid">
             <div class="row">
-              <div class="col-sm-12">
-                <div class="card">
-                  <div class="stepwizard">
-                    <div class="stepwizard-row setup-panel">
-                      <div class="stepwizard-step"><a class="btn btn-primary" href="#step-1">Dados Básicos</a></div>
-                      <div class="stepwizard-step"><a class="btn btn-light" href="#step-2">Endereço</a></div>
-                      <div class="stepwizard-step"><a class="btn btn-light" href="#step-3">Plano</a></div>
+                <div class="col-xl-12">
+                    <div class="card">
+                      <div class="card-body">
+                        <form>
+                        <div class="row">
+                            <div class="mb-3 col-sm-9">
+                                <label class="form-label">Nome do Plano</label>
+                                <input class="form-control" placeholder="Digite o nome do plano...">
+                              </div>
+                              <div class="mb-3 col-sm-3">
+                                <img class="planodef" src="./assets/images/planos/default.png">
+                              </div>
+                        </div>
+                          <div class="mb-3 col-sm-9">
+                            <h6 class="form-label">Descrição</h6>
+                            <textarea class="form-control" rows="5" placeholder="Digite a descrição do plano..."></textarea>
+                          </div>
+                          <div class="row">
+                            <div class="mb-3 col-sm-3">
+                                <label class="form-label">Valor</label>
+                                <input class="form-control" >
+                            </div>
+                            <div class="mb-3 col-sm-3">
+                                <label class="form-label">Carregar imagem do plano</label>
+                                <input type="file" class="carregar">
+                            </div>
+                          </div>
+                          <div class="form-footer">
+                            <button class="btn btn-primary btn-block">Cadastrar Plano</button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
-                  <div class="card-header">
-                    <h5>Cadastro de Paciente</h5>
-                  </div>
-                  <div class="card-body">
-                    <form action="#" method="POST">
-                      <div class="setup-content" id="step-1">
-                        <div class="col-xs-12">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <label class="control-label">Nome</label>
-                              <input class="form-control" type="text" >
-                            </div>
-                            <div class="form-group">
-                              <label class="control-label">CPF</label>
-                              <input class="form-control" type="text" >
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Telefone/whatsapp</label>
-                                <input class="form-control" type="text">
-                              </div>
-                              <div class="form-group">
-                                <label class="control-label">Email</label>
-                                <input class="form-control" type="text" >
-                              </div>
-                            <button class="btn btn-primary nextBtn pull-right" type="button">Próximo</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="setup-content" id="step-2">
-                        <div class="col-xs-12">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <label class="control-label">CEP</label>
-                              <input class="form-control" type="text">
-                            </div>
-                            <div class="form-group">
-                              <label class="control-label">Rua e Número</label>
-                              <input class="form-control" type="text">
-                            </div>
-                            <div class="row">
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Bairro</label>
-                                <input class="form-control" type="text">
-                              </div>
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Complemento</label>
-                                <input class="form-control" type="text">
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Cidade</label>
-                                <input class="form-control" type="text">
-                              </div>
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Estado</label>
-                                <input class="form-control" type="text">
-                              </div>
-                            </div>
-                          
-                  
-                            <button class="btn btn-primary nextBtn pull-right" type="button">Próximo</button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="setup-content" id="step-3">
-                        <div class="col-xs-12">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <label class="control-label">Plano</label>
-                                <select class="form-control" >
-                                
-                                  <option>----SELECIONE----</option>
-                                  <option>Plano 1</option>
-                                  <option>Plano 2</option>
-                                  <option>Plano 3</option>
-                                  <option>Plano 4</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                              <label class="control-label">Forma de Pagamento</label>
-                                <select class="form-control" >
-                                
-                                  <option>----SELECIONE----</option>
-                                  <option>Forma 1</option>
-                                  <option>Forma 2</option>
-                                  <option>Forma 3</option>
-                                  <option>Forma 4</option>
-                                </select>
-                            </div>
-                            <div class="row alinhar">
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Dia do vencimento</label>
-                                  <select class="form-control" >
-                                  
-                                    <option>----SELECIONE----</option>
-                                    <option>Dia 1</option>
-                                    <option>Dia 2</option>
-                                    <option>Dia 3</option>
-                                    <option>Dia 4</option>
-                                  </select>
-                              </div>
-                              <div class="form-group col-sm-6 teste" >
-                                <br>
-                                <label for="lastName">Não gerar cobrança</label>
-                                <input type="checkbox" name="lastName" id="lastName">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                              <h6 class="form-label">Queixa inicial</h6>
-                              <textarea class="form-control" rows="5"></textarea>
-                            </div>
-                            <div class="row">
-                             
-                              <button class="btn btn-secondary pull-right col-sm-2" type="submit">Cadastrar!</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
           <!-- Container-fluid Ends-->
