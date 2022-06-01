@@ -16416,6 +16416,20 @@ footer {
   border-bottom: 3px solid #24695c;
 }
 
+.lado{
+  display: flex;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.ladoitem{
+  display: flex;
+}
+
+.marcado{
+  margin-top: 4px;
+  margin-left: 10px;
+}
 
 .alinhar{
   display: flex;

@@ -194,11 +194,7 @@
                   </li>
                   <li class="dropdown"><a  class="nav-link menu-title" href="index.html"><i data-feather="home"></i><span>Home</span></a>
                   </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="javascript:void()"><i data-feather="user"></i><span>Pacientes</span></a>
-                    <ul class="nav-submenu menu-content">
-                      <li><a href="pacientes.html">Lista de Pacientes</a></li>
-                      <li><a href="cadastro.html">Cadastrar Paciente</a></li>
-                    </ul>
+                  <li class="dropdown"><a class="nav-link menu-title" href="pacientes.html"><i data-feather="user"></i><span>Pacientes</span></a>
                   </li>
                   <li class="dropdown"><a class="nav-link menu-title" href="financeiro.html"><i data-feather="credit-card"></i><span>Financeiro</span></a>
                   </li>
@@ -218,11 +214,10 @@
             <div class="page-header">
               <div class="row">
                 <div class="col-sm-6">
-                  <h3><br>Cadastro de Paciente</h3>
+                  <h3><br>Configurações do sistema</h3>
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Pacientes</li>
-                    <li class="breadcrumb-item active">Cadastro</li>
+                    <li class="breadcrumb-item active">Configurações</li>
                   </ol>
                 </div>
                 <div class="col-sm-6">
@@ -241,73 +236,100 @@
                 <div class="card">
                   <div class="stepwizard">
                     <div class="stepwizard-row setup-panel">
-                      <div class="stepwizard-step"><a class="btn btn-primary" href="#step-1">Dados Básicos</a></div>
-                      <div class="stepwizard-step"><a class="btn btn-light" href="#step-2">Endereço</a></div>
-                      <div class="stepwizard-step"><a class="btn btn-light" href="#step-3">Plano</a></div>
+                      <div class="stepwizard-step"><a class="btn btn-primary" href="#step-1">Parâmetros Gerais</a></div>
+                      <div class="stepwizard-step"><a class="btn btn-light" href="#step-2">Financeiros</a></div>
+                      <div class="stepwizard-step"><a class="btn btn-light" href="#step-3">Vencimentos</a></div>
                     </div>
-                  </div>
-                  <div class="card-header">
-                    <h5>Cadastro de Paciente</h5>
                   </div>
                   <div class="card-body">
                     <form action="#" method="POST">
                       <div class="setup-content" id="step-1">
                         <div class="col-xs-12">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <label class="control-label">Nome</label>
-                              <input class="form-control" type="text" >
+                          <div class="form-group col-sm-6 teste" >
+                            <br>
+                            <label for="lastName">Enviar mensagem de boas vindas?</label>
+                            <input type="checkbox" name="lastName" id="lastName">
                             </div>
-                            <div class="form-group">
-                              <label class="control-label">CPF</label>
-                              <input class="form-control" type="text" >
+                            <div class="mb-3">
+                              <h6 class="form-label">Texto de boas vindas</h6>
+                              <textarea class="form-control" rows="5"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">Telefone/whatsapp</label>
-                                <input class="form-control" type="text">
-                              </div>
-                              <div class="form-group">
-                                <label class="control-label">Email</label>
-                                <input class="form-control" type="text" >
-                              </div>
-                            <button class="btn btn-primary nextBtn pull-right" type="button">Próximo</button>
-                          </div>
+                            <button class="btn btn-primary" type="submit">Salvar</button>
                         </div>
                       </div>
                       <div class="setup-content" id="step-2">
                         <div class="col-xs-12">
                           <div class="col-md-12">
                             <div class="form-group">
-                              <label class="control-label">CEP</label>
+                              <label class="control-label">Token Hinovapay</label>
                               <input class="form-control" type="text">
                             </div>
                             <div class="form-group">
-                              <label class="control-label">Rua e Número</label>
+                              <label class="control-label">Client Partner</label>
                               <input class="form-control" type="text">
                             </div>
-                            <div class="row">
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Bairro</label>
+                            <div class="multa">
+                              <div class="form-group col-sm-6 teste" >
+                                <br>
+                                <label for="lastName">Cobrar multa e juros?</label>
+                                <input type="checkbox" id="myCheck" onclick="myFunction()">
+                                </div>
+                            </div>
+                            <div id="text" style="display: none;">
+                              <div class="mb-3">
+                                <div class="form-group">
+                                  <label class="control-label">Considerar Prorrogação</label>
+                                    <select class="form-control" >
+                                      <option>Sim</option>
+                                      <option>Não</option>
+                                    </select>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="form-group col-sm-6 teste" >
+                                  <label class="control-label">Multa</label>
                                 <input class="form-control" type="text">
                               </div>
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Complemento</label>
-                                <input class="form-control" type="text">
+                              <div class="form-group col-sm-6 teste" >
+                                <div class="lado">
+                                  <div class="ladoitem">
+                                    <label class="control-label">Valor(R$)</label>
+                                    <input class="marcado" type="checkbox">
+                                  </div>
+                                  <div class="ladoitem">
+                                    <label class="control-label">Porcentagem(%)</label>
+                                    <input class="marcado" type="checkbox">
+                                  </div>                             
+                                </div>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Cidade</label>
-                                <input class="form-control" type="text">
-                              </div>
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Estado</label>
-                                <input class="form-control" type="text">
+                              <div class="form-group col-sm-6 teste" >
+                                <label class="control-label">Mora</label>
+                              <input class="form-control" type="text">
+                            </div>
+                            <div class="form-group col-sm-6 teste" >
+                              <div class="lado">
+                                <div class="ladoitem">
+                                  <label class="control-label">Valor(R$)</label>
+                                  <input class="marcado" type="checkbox">
+                                </div>
+                                <div class="ladoitem">
+                                  <label class="control-label">Porcentagem(%)</label>
+                                  <input class="marcado" type="checkbox">
+                                </div>                             
                               </div>
                             </div>
+                          </div>
+                          <div class="form-group col-sm-6 teste" >
+                            <label class="control-label">Descrição do boleto</label>
+                            <input class="form-control" type="text">
+                          </div>
+                          </div>
+                        </div>
                           
                   
-                            <button class="btn btn-primary nextBtn pull-right" type="button">Próximo</button>
+                            <button class="btn btn-primary nextBtn pull-right" type="button">Salvar</button>
                           </div>
                         </div>
                       </div>
@@ -402,6 +424,7 @@
       <!-- Theme js-->
       <script src="../assets/js/script.js"></script>
       <script src="../assets/js/theme-customizer/customizer.js"></script>
+      <script src="./assets/js/checked.js"></script>
       <!-- login js-->
       <!-- Plugin used-->
   </body>
