@@ -154,6 +154,15 @@ span {
 
   .lateral{
     display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+
+  .final{
+    display: flex;
+    position: relative;
+    margin-left: 70%;
   }
 
   .lateral input{
@@ -27223,6 +27232,15 @@ span.twitter-typeahead .tt-suggestion {
   .linha{
     display: flex;
     align-items: center;
+    margin-left: 10px;
+  }
+
+  .linha2{
+    display: flex;
+    align-items: center;
+  }
+
+  .linha2 i{
     margin-left: 10px;
   }
 

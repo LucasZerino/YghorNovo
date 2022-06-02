@@ -184,27 +184,29 @@
               <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
               <div id="mainnav">           
                 <ul class="nav-menu custom-scrollbar">
-                  <li class="back-btn">
-                    <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
-                  </li>
-                  <li class="sidebar-main-title">
-                    <div>
-                      <h6>Dashboard</h6>
-                    </div>
-                  </li>
-                  <li class="dropdown"><a  class="nav-link menu-title" href="index.html"><i data-feather="home"></i><span>Home</span></a>
-                  </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="pacientes.html"><i data-feather="user"></i><span>Pacientes</span></a>
-                  </li>
-                  <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="credit-card"></i><span>Financeiro</span></a>
-                    <ul class="nav-submenu menu-content">
-                      <li><a href="financeiro.html">Pagamentos recentes</a></li>
-                      <li><a href="boletoavulso.html">Boleto avulso</a></li>
-                      <li><a href="boletorecorrente.html">Boleto recorrente</a></li>
-                      <li><a href="plano.html">Cadastrar plano</a></li>
-                    </ul>
-                  </li>
-                </ul>
+                    <li class="back-btn">
+                      <div class="mobile-back text-end"><span>Voltar</span><i class="fa fa-angle-right ps-2" aria-hidden="true"></i></div>
+                    </li>
+                    <li class="sidebar-main-title">
+                      <div>
+                        <h6>Dashboard</h6>
+                      </div>
+                    </li>
+                    <li class="dropdown"><a  class="nav-link menu-title" href="index.html"><i data-feather="home"></i><span>Home</span></a>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="pacientes.html"><i data-feather="user"></i><span>Pacientes</span></a>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="javascript:void(0)"><i data-feather="credit-card"></i><span>Financeiro</span></a>
+                      <ul class="nav-submenu menu-content">
+                        <li><a href="financeiro.html">Pagamentos recentes</a></li>
+                        <li><a href="fatura.html">Nova Fatura</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="planos.html"><i data-feather="airplay"></i><span>Planos</span></a>
+                    </li>
+                    <li class="dropdown"><a class="nav-link menu-title" href="config.html"><i data-feather="settings"></i><span>Configurações</span></a>
+                    </li>
+                  </ul>
               </div>
               <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
             </div>
@@ -216,11 +218,11 @@
             <div class="page-header">
               <div class="row">
                 <div class="col-sm-6">
-                  <h3><br>Gerar Boleto avulso</h3>
+                  <h3><br>Gerar Fatura</h3>
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                     <li class="breadcrumb-item active">Financeiro</li>
-                    <li class="breadcrumb-item active">Boleto avulso</li>
+                    <li class="breadcrumb-item active">Nova Fatura</li>
                   </ol>
                 </div>
                 <div class="col-sm-6">
@@ -235,157 +237,142 @@
           <div class="container-fluid">
             <div class="card">
               <div class="card-header pb-0">
-                <h5>Boleto avulso</h5>
+                <h5>Fatura Nº 1654</h5>
               </div>
               <div class="card-body">
+                  <div class="row">
+
+                        <div class="mb-3 col-sm-6">
+                            <label for="inputEmail4">Nome do paciente</label>
+                            <div class="linha2">
+                              <input type="text" class="form-control floating" placeholder="Pesquisar por paciente...">
+                              <i class="fa fa-search"></i>
+                             </div>
+                          </div>
+                          <div class="form-group col-sm-6 teste" >
+                            <div class="row">
+                                <div class="mb-3 col-sm-6">
+                                    <br>
+                                    <br>
+                                    <label for="lastName">Fatura recorrente?</label>
+                                    <input type="checkbox" id="myCheck" onclick="myFunction()">
+                                </div> 
+                                    <div class="mb-3 col-sm-6">
+                                        <div id="text" style="display: none;">
+                                        <label for="inputEmail4">Quantidade de repetições</label>
+                                        <input type="number" class="form-control floating" placeholder=""></inp>
+                                    </div>
+                                </div>             
+                            </div>
+                            </div>
+                    
+                    </div>
+                 
                 <div class="row">
-                  <div class="col-xl-6 col-sm-12">
-                    <form>
-                      <div class="row">
-                        <div class="mb-3 col-sm-6">
-                          <label for="inputEmail4">Nome do paciente</label>
-                          <input class="form-control" id="inputEmail4" type="email">
-                        </div>
-                        <div class="mb-3 col-sm-6">
-                          <label for="inputPassword4">Plano</label>
-                          <select class="form-control" id="inputState">
-                            <option selected="">----Selecione----</option>
-                            <option>...</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="mb-3 col-sm-6">
-                          <label for="inputEmail5">Telefone</label>
-                          <input class="form-control" id="inputEmail5" type="email">
-                        </div>
-                        <div class="mb-3 col-sm-6">
-                          <label for="inputPassword7">Email</label>
-                          <input class="form-control" id="inputPassword7" type="password">
-                        </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="inputState">CEP</label>
-                        <input class="form-control" id="inputAddress5" type="text">
-                      </div>
-                      <div class="mb-3">
-                        <label for="inputAddress5">Cidade</label>
-                        <input class="form-control" id="inputAddress5" type="text">
-                      </div>
-                      <div class="row">
-                        <div class="mb-3 col-sm-6">
-                            <label for="inputCity">Rua</label>
-                            <input class="form-control" id="inputCity" type="text">
-                          </div>
-                        <div class="mb-3 col-sm-6">
-                            <label for="inputAddress6">Nº</label>
-                            <input class="form-control" id="inputAddress6" type="text">
-                          </div>
-                      </div>
-                      <div class="mb-3">
-                        <label for="inputAddress2">Estado</label>
-                        <input class="form-control" id="inputAddress2" type="text">
-                      </div>
-                      <div class="mb-3 col-sm-12">
-                        <label for="inputPassword4">Forma de cobrança</label>
-                        <select class="form-control" id="inputState">
-                          <option selected="">----Selecione----</option>
-                          <option>Email</option>
-                          <option>whatsapp</option>
-                          <option>Não gerar cobrança</option>
-                        </select>
-                      </div>
-                      <div class="row">
-                        <div class="mb-3 col-sm-4">
-                            <label for="inputPassword4">Data da consulta</label>
-                            <div class="shopping-checkout-option">
-                                <label class="d-block" for="chk-ani">
-                                    <input id="date" type="date">
-                                </label>
-                                </div>
-                          </div>
-                          <div class="mb-3 col-sm-4">
-                            <label for="inputPassword4">Data da cobrança</label>
-                            <div class="shopping-checkout-option">
-                                <label class="d-block" for="chk-ani">
-                                    <input id="date" type="date">
-                                </label>
-                                </div>
-                          </div>
-                          <div class="mb-3 col-sm-4">
-                            <label for="inputPassword4">Data do vencimento</label>
-                            <div class="shopping-checkout-option">
-                                <label class="d-block" for="chk-ani">
-                                    <input id="date" type="date">
-                                </label>
-                                </div>
-                          </div>
-                      </div>              
-                    </form>
+                    <div class="mb-3 col-sm-6">
+                        <label for="inputEmail4">Endereço da cobrança</label>
+                        <textarea type="text" class="form-control floating" placeholder=""></textarea>
+                    </div>
+
+                    <div class="mb-3 col-sm-3">
+                        <label for="inputEmail4">Data da Fatura</label>
+                        <input type="date" class="form-control floating" placeholder=""></input>
+                    </div>
+
+                    <div class="mb-3 col-sm-3">
+                        <label for="inputEmail4">Data de Vencimento</label>
+                        <input type="date" class="form-control floating" placeholder=""></input>
+                    </div>
+
+                </div>
+                <div class="table-responsive invoice-table" id="table">
+                    <table class="table table-bordered table-striped">
+                      <tbody>
+                        <tr>
+                          <td class="item">
+                            <h6 class="p-2 mb-0">#</h6>
+                          </td>
+                          <td class="Hours">
+                            <h6 class="p-2 mb-0">DATA DO SERVIÇO</h6>
+                          </td>
+                          <td class="Rate">
+                            <h6 class="p-2 mb-0">TRATAMENTO</h6>
+                          </td>
+                          <td class="subtotal">
+                            <h6 class="p-2 mb-0">DESCRIÇÃO</h6>
+                          </td>
+                          <td class="subtotal">
+                            <h6 class="p-2 mb-0">QTDE</h6>
+                          </td>
+                          <td class="subtotal">
+                            <h6 class="p-2 mb-0">R$ UNITÁRIO</h6>
+                          </td>
+                          <td class="subtotal">
+                            <h6 class="p-2 mb-0">VALOR</h6>
+                          </td>
+                          <td class="subtotal">
+                            <h6 class="p-2 mb-0">OPÇÃO</h6>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <p class="m-0">1</p>
+                          </td>
+                          <td>
+                            <input class="form-control floating" type="date">
+                          </td>
+                          <td>
+                            <input class="form-control floating" type="text" value="Pilates">
+                          </td>
+                          <td>
+                            <textarea class="form-control floating">Lorem ipsum dolor sit amet .</textarea>
+                          </td>
+                          <td>
+                            <input class="form-control floating" type="text" value="1">
+                          </td>
+                          <td>
+                            <input class="form-control floating" type="text" value="R$ 45">
+                           <td>
+                            <input class="form-control floating" type="text" value="R$ 45">
+                          </td>
+                          <td>
+                            <a href="#" class="btn btn-primary shadow btn-xs sharp mr-1"><i class="fa fa-pencil"></i></a>
+                            <a href="#" class="btn btn-danger shadow btn-xs sharp mr-1"><i class="fa fa-trash"></i></a>
+                          </td>
+                        </tr>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
-                  <div class="col-xl-6 col-sm-12">
-                    <div class="checkout-details">
-                      <div class="order-box">
-                        <div class="title-box">
-                          <div class="checkbox-title">
-                            <h4 class="mb-0">Descrição da cobrança </h4><span>Total</span>
-                          </div>
+                  <br>
+                  <div class="row">
+                    <div class="mb-3 col-sm-6">
+                        <div class="lateral">
+                            <div class="order-place"><a class="btn btn-primary" >Adicionar Linha  </a></div>
+          
+                   
+                            <div class="order-place"><a class="btn btn-primary" >Limpar todas as linhas  </a></div>
                         </div>
-                        <ul class="qty">
-                          <div class="row">
-                            <div class="mb-3 col-sm-4">
-                                <label class="form-label">Tipo de atendimento</label>
-                                <select class="form-control" id="inputState">
-                                    <option selected="">----Selecione----</option>
-                                    <option>...</option>
-                                  </select>
-                              </div>
-                              <div class="mb-3 col-sm-4">
-                                <label class="form-label">Nº de sessões</label>
-                                <input class="form-control" type="number" value="2">
-                              </div>
-                              <div class="mb-3 col-sm-4">
-                                <label class="form-label">Valor</label>
-                                <input class="form-control" type="text" value="R$ 210.00">
-                              </div>
-                          </div>
-                         
-                        </ul>
-                        <ul class="sub-total">
-                          <li>Subtotal <span class="count">R$210.00</span></li>
-                          </li>
-                            <li class="shipping-class">Taxas
-                                <div class="shopping-checkout-option">
-                                <label class="d-block" for="chk-ani">
-                                    <input class="checkbox_animated" id="chk-ani" type="checkbox" checked="">Taxa 1 (R$ 10.00)
-                                </label>
-                                <label class="d-block" for="chk-ani1">
-                                    <input class="checkbox_animated" id="chk-ani1" type="checkbox">Taxa 2 (R$ 20.00)
-                                </label>
-                                </div>
-                            </li>
-                          </li>
-                             <li class="shipping-class">Desconto
-                                <div class="shopping-checkout-option">
-                                <label class="d-block" for="chk-ani">
-                                    <input class="checkbox_animated" id="chk-ani" type="checkbox" checked="">10%
-                                </label>
-                                <label class="d-block" for="chk-ani1">
-                                    <input class="checkbox_animated" id="chk-ani1" type="checkbox">20%
-                                </label>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="sub-total total">
-                          <li>Total a ser pago <span class="count">R$200.00</span></li>
-                        </ul>
-                        <br>
-                        <div class="order-place"><a class="btn btn-primary" href="javascript:void(0)">Gerar boleto  </a></div>
-                      </div>
+                    </div>
+                    <div class="mb-3 col-sm-6">
+                        <h5 class="final"> Total: 45,00 R$</h5>
+                        <h6 class="final">Saldo devido: 0,00 R$</h6>
                     </div>
                   </div>
+                  <div class="mb-3 col-sm-6">
+                    <label for="lastName">Mensagem exibida na fatura</label>
+                    <textarea class="form-control floating"></textarea>
+                  </div>
+                <div class="row">
+                    <div class="mb-3 col-sm-10">
+                        <label for="lastName">Enviar fatura por email?</label>
+                                    <input type="checkbox">
+                    </div>
+                    <div class="mb-3 col-sm-2">
+                        <div class="order-place"><a class="btn btn-primary" href="javascript:void(0)">Gerar Fatura  </a></div>
+                    </div>
+                    </div>
                 </div>
-              </div>
             </div>
           </div>
           <!-- Container-fluid Ends-->
@@ -421,6 +408,7 @@
     <!-- Theme js-->
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/theme-customizer/customizer.js"></script>
+    <script src="./assets/js/checked.js"></script>
     <!-- login js-->
     <!-- Plugin used-->
   </body>
