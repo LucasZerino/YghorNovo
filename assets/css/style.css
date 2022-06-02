@@ -27252,7 +27252,7 @@ span.twitter-typeahead .tt-suggestion {
   }
 
   .planodef{
-    position: absolute;
+   position: relative;
   }
   .plano-widget{
     display: flex;

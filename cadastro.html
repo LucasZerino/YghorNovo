@@ -246,125 +246,197 @@
                       <div class="stepwizard-step"><a class="btn btn-light" href="#step-3">Plano</a></div>
                     </div>
                   </div>
-                  <div class="card-header">
-                    <h5>Cadastro de Paciente</h5>
-                  </div>
-                  <div class="card-body">
-                    <form action="#" method="POST">
-                      <div class="setup-content" id="step-1">
-                        <div class="col-xs-12">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <label class="control-label">Nome</label>
-                              <input class="form-control" type="text" >
-                            </div>
-                            <div class="form-group">
-                              <label class="control-label">CPF</label>
-                              <input class="form-control" type="text" >
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label">Telefone/whatsapp</label>
-                                <input class="form-control" type="text">
-                              </div>
-                              <div class="form-group">
-                                <label class="control-label">Email</label>
-                                <input class="form-control" type="text" >
-                              </div>
-                            <button class="btn btn-primary nextBtn pull-right" type="button">Próximo</button>
-                          </div>
+
+                  <div class="card-body" >
+                    <form class="f1" method="post" id="address-form">
+                      <div class="f1-steps">
+                        <div class="f1-progress">
+                          <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3"></div>
+                        </div>
+                        <div class="f1-step active">
+                          <div class="f1-step-icon"><i class="fa fa-user"></i></div>
+                          <p>Dados Básicos</p>
+                        </div>
+                        <div class="f1-step">
+                          <div class="f1-step-icon"><i class="fa fa-map-marker"></i></div>
+                          <p>Endereço</p>
+                        </div>
+                        <div class="f1-step">
+                          <div class="f1-step-icon"><i class="fa fa-medkit"></i></div>
+                          <p>Plano</p>
                         </div>
                       </div>
-                      <div class="setup-content" id="step-2">
-                        <div class="col-xs-12">
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <label class="control-label">CEP</label>
-                              <input class="form-control" type="text">
-                            </div>
-                            <div class="form-group">
-                              <label class="control-label">Rua e Número</label>
-                              <input class="form-control" type="text">
-                            </div>
-                            <div class="row">
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Bairro</label>
-                                <input class="form-control" type="text">
-                              </div>
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Complemento</label>
-                                <input class="form-control" type="text">
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Cidade</label>
-                                <input class="form-control" type="text">
-                              </div>
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Estado</label>
-                                <input class="form-control" type="text">
-                              </div>
-                            </div>
-                          
-                  
-                            <button class="btn btn-primary nextBtn pull-right" type="button">Próximo</button>
-                          </div>
+                      <fieldset class="setup-content" id="step-1">
+                        <div class="form-group">
+                          <label for="f1-first-name">Nome</label>
+                          <input class="form-control" id="f1-first-name" type="text"  required="sim">
                         </div>
-                      </div>
-                      <div class="setup-content" id="step-3">
-                        <div class="col-xs-12">
-                          <div class="col-md-12">
+                        <div class="form-group">
+                          <label for="f1-first-name">CPF</label>
+                          <input class="form-control" id="f1-first-name" type="text"  required="sim">
+                        </div>
+                        <div class="form-group">
+                          <label for="f1-first-name">Telefone/Whatsapp</label>
+                          <input class="form-control" id="f1-first-name" type="text">
+                        </div>
+                        <div class="form-group">
+                          <label for="f1-last-name">Email</label>
+                          <input class="f1-last-name form-control" id="f1-last-name" type="text">
+                        </div>
+                        <div class="f1-buttons">
+                          <button class="btn btn-primary btn-next  nextBtn pull-right" type="button">Próximo</button>
+                        </div>
+                      </fieldset>
+                      <fieldset class="setup-content" id="step-2">
+                        <div class="form-group">
+                          <label for="cep">CEP</label>
+                          <input
+                          type="text"
+                          class="form-control shadow-none"
+                          id="cep"
+                          name="cep"
+                       
+                          maxlength="8"
+                          minlength="8"
+                          required='sim'
+                        />
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-sm-6">
                             <div class="form-group">
-                              <label class="control-label">Plano</label>
-                                <select class="form-control" >
-                                
-                                  <option>----SELECIONE----</option>
-                                  <option>Plano 1</option>
-                                  <option>Plano 2</option>
-                                  <option>Plano 3</option>
-                                  <option>Plano 4</option>
-                                </select>
+                              <label for="adress">Rua</label>
+                              <input
+                              type="text"
+                              class="form-control shadow-none"
+                              id="address"
+                              name="address"
+              
+                              required
+                              data-input
+                            />
                             </div>
+                          </div>
+                          <div class="form-group col-sm-6">
                             <div class="form-group">
-                              <label class="control-label">Forma de Pagamento</label>
-                                <select class="form-control" >
-                                
-                                  <option>----SELECIONE----</option>
-                                  <option>Forma 1</option>
-                                  <option>Forma 2</option>
-                                  <option>Forma 3</option>
-                                  <option>Forma 4</option>
-                                </select>
-                            </div>
-                            <div class="row alinhar">
-                              <div class="form-group col-sm-6">
-                                <label class="control-label">Dia do vencimento</label>
-                                  <select class="form-control" >
-                                  
-                                    <option>----SELECIONE----</option>
-                                    <option>Dia 1</option>
-                                    <option>Dia 2</option>
-                                    <option>Dia 3</option>
-                                    <option>Dia 4</option>
-                                  </select>
-                              </div>
-                              <div class="form-group col-sm-6 teste" >
-                                <br>
-                                <label for="lastName">Não gerar cobrança</label>
-                                <input type="checkbox" name="lastName" id="lastName">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                              <h6 class="form-label">Queixa inicial</h6>
-                              <textarea class="form-control" rows="5"></textarea>
-                            </div>
-                            <div class="row">
-                             
-                              <button class="btn btn-secondary pull-right col-sm-2" type="submit">Cadastrar!</button>
+                              <label for="number">Número</label>
+                              <input
+                              type="text"
+                              class="form-control shadow-none"
+                              id="number"
+                              name="number"
+                      
+                              required
+                              data-input
+                            />
                             </div>
                           </div>
                         </div>
-                      </div>
+                        <div class="row">
+                          <div class="form-group col-sm-6">
+                            <div class="form-group">
+                              <label for="neighborhood">Bairro</label>
+                              <input class="form-control"  id="neighborhood" name="neighborhood" type="text" data-input>
+                            </div>
+                          </div>
+                          <div class="form-group col-sm-6">
+                            <div class="form-group">
+                              <label for="f1-first-name">Complemento</label>
+                              <input class="form-control" id="complement" name="complement" type="text" data-input>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="form-group col-sm-6">
+                            <label for="city">Cidade</label>
+                            <input class="form-control" id="city" name="city" type="text" data-input>
+                          </div>
+                          <div class="form-group col-sm-6">
+                            <label for="f1-first-name">Estado</label>
+                            <select class="form-control" name="region" id="region"  data-input>
+                              <option selected>--Selecione--</option>
+                              <option value="AC">Acre</option>
+                              <option value="AL">Alagoas</option>
+                              <option value="AP">Amapá</option>
+                              <option value="AM">Amazonas</option>
+                              <option value="BA">Bahia</option>
+                              <option value="CE">Ceará</option>
+                              <option value="DF">Distrito Federal</option>
+                              <option value="ES">Espírito Santo</option>
+                              <option value="GO">Goiás</option>
+                              <option value="MA">Maranhão</option>
+                              <option value="MT">Mato Grosso</option>
+                              <option value="MS">Mato Grosso do Sul</option>
+                              <option value="MG">Minas Gerais</option>
+                              <option value="PA">Pará</option>
+                              <option value="PB">Paraíba</option>
+                              <option value="PR">Paraná</option>
+                              <option value="PE">Pernambuco</option>
+                              <option value="PI">Piauí</option>
+                              <option value="RJ">Rio de Janeiro</option>
+                              <option value="RN">Rio Grande do Norte</option>
+                              <option value="RS">Rio Grande do Sul</option>
+                              <option value="RO">Rondônia</option>
+                              <option value="RR">Roraima</option>
+                              <option value="SC">Santa Catarina</option>
+                              <option value="SP">São Paulo</option>
+                              <option value="SE">Sergipe</option>
+                              <option value="TO">Tocantins</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="f1-buttons">
+                          <button class="btn btn-primary btn-next  nextBtn pull-right" type="button">Próximo</button>
+                        </div>
+                      </fieldset>
+                      <fieldset class="setup-content" id="step-3">
+                        <div class="form-group">
+                          <label class="control-label">Plano</label>
+                            <select class="form-control" >
+                            
+                              <option>----SELECIONE----</option>
+                              <option>Plano 1</option>
+                              <option>Plano 2</option>
+                              <option>Plano 3</option>
+                              <option>Plano 4</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label">Forma de Pagamento</label>
+                            <select class="form-control" >
+                            
+                              <option>----SELECIONE----</option>
+                              <option>Forma 1</option>
+                              <option>Forma 2</option>
+                              <option>Forma 3</option>
+                              <option>Forma 4</option>
+                            </select>
+                        </div>
+                        <div class="row alinhar">
+                          <div class="form-group col-sm-6">
+                            <label class="control-label">Dia do vencimento</label>
+                              <select class="form-control" >
+                              
+                                <option>----SELECIONE----</option>
+                                <option>Dia 1</option>
+                                <option>Dia 2</option>
+                                <option>Dia 3</option>
+                                <option>Dia 4</option>
+                              </select>
+                          </div>
+                          <div class="form-group col-sm-6 teste" >
+                            <br>
+                            <label for="lastName">Não gerar cobrança</label>
+                            <input type="checkbox" name="lastName" id="lastName">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                          <h6 class="form-label">Queixa inicial</h6>
+                          <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                        <div class="f1-buttons">
+                          <button class="btn btn-primary btn-submit" type="submit">Cadastrar</button>
+                        </div>
+                      </fieldset>
                     </form>
                   </div>
                 </div>
@@ -398,10 +470,12 @@
       <script src="../assets/js/bootstrap/bootstrap.min.js"></script>
       <!-- Plugins JS start-->
       <script src="../assets/js/form-wizard/form-wizard-two.js"></script>
+      <script src="../assets/js/form-wizard/form-wizard-three.js"></script>
       <!-- Plugins JS Ends-->
       <!-- Theme js-->
       <script src="../assets/js/script.js"></script>
       <script src="../assets/js/theme-customizer/customizer.js"></script>
+      <script src="./assets/js/cep.js"></script>
       <!-- login js-->
       <!-- Plugin used-->
   </body>
